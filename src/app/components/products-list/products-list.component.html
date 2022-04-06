@@ -1,0 +1,19 @@
+<div>
+    <p style="margin-bottom: 5px;">
+        Cantidad de productos: {{myCarroDeCompras.length}}
+    </p>
+    <p>
+        El total es: ${{total}}
+    </p>
+    <p style="margin-top: 5px">
+        Today: {{ today | date:'short'}}
+    </p>
+
+
+</div>
+<!-- <div class="products-grid"> -->
+<div class="row">
+    <div class="col-3">
+        <app-product (sumarAlCarro)="sumarAlCarro($event)" [product]="product" *ngFor="let product of products"></app-product>
+    </div>
+</div>
